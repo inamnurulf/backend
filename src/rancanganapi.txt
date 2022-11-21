@@ -1,0 +1,36 @@
+apa saja api yang perlu dibuat
+
+CLASS_Mission
+GET
+req:-
+res: 
+message: 'get telah berhasil dilakukan'
+all of the mission
+
+
+PUT
+req:
+-id
+-title or circle or poligon or marker[more than 1]
+res:
+message:'telah berhasil melakukan edit'
+id:
+new data
+
+POST
+req:
+id 
+data{
+    title
+    date
+    marker
+    poligon
+    circle
+}
+res:
+
+DELETE
+req: id
+res:{
+    message: 'data telah berhasil di hapus'
+}
