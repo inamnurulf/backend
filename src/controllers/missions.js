@@ -69,3 +69,28 @@ exports.deleteMissions = async (req, res, next) => {
     res.status(200).json(mission)
     next();
 }
+
+exports.getMission = async (req, res, next) => {
+    const id = req.params.id;
+
+    //cek valid ID 
+    if (!mongoose.Types.ObjectId.isValid(id)) {
+        return res.status(404).json({
+            message: "No such Missions " + id
+        })
+    }
+
+    const mission = await Mission.findById(id)
+
+    res.status(200).json(mission)
+
+    if (!mission) {
+        res.status(404).json({
+            message: "No such Missions"
+        })
+    }
+
+    res.status(200).json(mission)
+    next();
+
+}

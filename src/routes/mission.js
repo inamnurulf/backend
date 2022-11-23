@@ -14,7 +14,9 @@ router.get('/', (req,res,next)=>{
 
 router.post('/mission', missionsControllers.postMissions)
 
-router.get('/mission', missionsControllers.getMissions)
+router.get('/missions', missionsControllers.getMissions)
+
+router.get('/mission/:id', missionsControllers.getMission)
 
 router.patch('/mission/:id', missionsControllers.patchMissions)
 
