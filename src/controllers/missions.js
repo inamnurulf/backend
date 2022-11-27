@@ -90,7 +90,6 @@ exports.getMission = async (req, res, next) => {
         })
     }
 
-    res.status(200).json(mission)
     next();
 
 }
